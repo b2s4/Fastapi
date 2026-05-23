@@ -38,7 +38,7 @@ async def add_course(course: Course):
         with open(JSON_FILE, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
             
-        return {"msg": "수강기록이 성공적으로 추가되었습니다."}
+        return {"msg": "수강기록 추가 성공"}
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
